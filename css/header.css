@@ -4,15 +4,45 @@
 .header .container {
   display: flex;
 }
+.burger-menu-btn {
+  margin-left: auto;
+
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .burger-menu-btn {
+    display: none;
+  }
+}
+.burger-menu-icon {
+}
+
 .header-menu {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .header-menu {
+    display: block;
+  }
 }
 .header-list {
   display: flex;
   gap: 40px;
-
-  margin-left: 76px;
 }
-.header-item {
+@media only screen and (min-width: 768px) {
+  .header-list {
+    margin-left: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .header-list {
+    margin-left: 76px;
+  }
 }
 .header-link {
   position: relative;

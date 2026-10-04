@@ -36,10 +36,18 @@
   background: #fcfcfc;
 
   border-radius: 4px;
-  padding: 72px 24px 24px;
+
+  padding: 72px 16px 24px;
+  max-width: 288px;
+  min-height: 623px;
   width: 100%;
-  max-width: 408px;
-  min-height: 584px;
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    padding: 72px 24px 24px;
+    max-width: 408px;
+    min-height: 584px;
+  }
 }
 .modal-btn {
   position: absolute;
@@ -64,9 +72,6 @@
 .modal-btn:focus {
   background-color: #404bbf;
   color: #fff;
-}
-
-.modal-btn-icon {
 }
 .modal-caption {
   font-weight: 500;
@@ -99,13 +104,18 @@
   outline: transparent;
 
   padding: 8px 38px;
-  width: 360px;
+  width: 256px;
   height: 40px;
   max-width: 360px;
   min-height: 40px;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: border-color;
+}
+@media only screen and (min-width: 768px) {
+  .modal-form-input {
+    width: 360px;
+  }
 }
 .modal-form-input:focus {
   border-color: #4d5ae5;
@@ -131,7 +141,7 @@
   border-radius: 4px;
   outline: transparent;
   padding: 8px 16px;
-  width: 360px;
+  width: 256px;
   height: 120px;
 
   font-size: 12px;
@@ -144,6 +154,11 @@
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: border-color;
+}
+@media only screen and (min-width: 768px) {
+  .modal-form-comment {
+    width: 360px;
+  }
 }
 .modal-form-comment::placeholder {
   color: rgba(46, 47, 66, 0.4);
@@ -171,6 +186,8 @@
   align-items: center;
   justify-content: center;
   margin-right: 8px;
+
+  flex-shrink: 0;
 
   cursor: pointer;
 

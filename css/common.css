@@ -44,12 +44,7 @@ button {
   border: none;
 }
 
-/* Main styles */
-
-.section {
-  padding: 120px 0;
-}
-
+/* Support class */
 .sr-only {
   position: absolute;
   white-space: nowrap;
@@ -62,6 +57,38 @@ button {
   clip-path: inset(100%);
   margin: -1px;
 }
+.hide {
+  display: none;
+}
+/* Main styles */
+
+.section {
+  padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+
+.container {
+  max-width: 320px;
+  width: 100%;
+
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
 
 /* Logo styles */
 .logo-link {
@@ -73,7 +100,17 @@ button {
   text-transform: uppercase;
   color: #2e2f42;
 
-  padding: 24px 0;
+  padding: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .logo-link {
+    padding: 24px 0 24px 16px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .logo-link {
+    padding: 24px 0 24px 15px;
+  }
 }
 .accent {
   color: #4d5ae5;
@@ -81,29 +118,60 @@ button {
 
 /* Contacts styles */
 .contacts {
+  display: none;
   margin-left: auto;
   padding-right: 15px;
 }
-.contacts-list {
-  display: flex;
-  gap: 40px;
+@media only screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+    padding: 16px;
+  }
 }
-.contacts-item {
+@media only screen and (min-width: 1158px) {
+  .contacts {
+    display: block;
+    padding: 0;
+  }
+}
+.contacts .contacts-list {
+  display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .contacts .contacts-list {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .contacts .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+
+    margin-right: 15px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
 .contacts-link {
   display: block;
-  padding: 24px 0;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
 }
+@media only screen and (min-width: 1158px) {
+  .contacts-link {
+    padding: 24px 0;
+  }
+}
 .contacts-link:hover,
 .contacts-link:focus {
   color: #404bbf;
-}
-
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
