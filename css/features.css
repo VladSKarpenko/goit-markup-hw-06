@@ -5,6 +5,11 @@
   gap: 72px 24px;
 }
 @media only screen and (min-width: 768px) {
+  .features-list {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 768px) {
   .features-item {
     width: calc((100% - 24px * 1) / 2);
   }
